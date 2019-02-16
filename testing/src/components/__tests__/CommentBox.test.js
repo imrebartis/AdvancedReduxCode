@@ -23,4 +23,6 @@ it('has a text area that users can type in', () => {
   wrapped.find('textarea').simulate('change', {
     target: { value: 'new comment'}
   });
+  // force the component to update as soon as the change has been simulated:
+  wrapped.update();
 })
