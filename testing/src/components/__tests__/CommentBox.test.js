@@ -25,4 +25,6 @@ it('has a text area that users can type in', () => {
   });
   // force the component to update as soon as the change has been simulated:
   wrapped.update();
+
+  expect(wrapped.find('textarea').prop('value')).toEqual('new comment');
 })
