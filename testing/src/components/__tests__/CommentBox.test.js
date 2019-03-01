@@ -1,11 +1,17 @@
 import React from "react";
 import { mount } from "enzyme";
 import CommentBox from "components/CommentBox";
+import Root from 'Root';
 
 let wrapped;
 
 beforeEach(() => {
-  wrapped = mount(<CommentBox />);
+  wrapped = mount(
+    // add the Provider tag (which here goes under the name of Root) to CommentBox so that the component could be tested
+    <Root>
+      <CommentBox />
+    </Root>
+    );
 });
 
 afterEach(() => {
