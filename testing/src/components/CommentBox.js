@@ -17,15 +17,21 @@ class CommentBox extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <h4>Add a comment</h4>
-        <textarea onChange={this.handleChange} value={this.state.comment} />
-        <div>
-          <button>Submit coment</button>
-        </div>
-      </form>
+      <div>
+        <form onSubmit={this.handleSubmit}>
+          <h4>Add a comment</h4>
+          <textarea onChange={this.handleChange} value={this.state.comment} />
+          <div>
+            <button>Submit coment</button>
+          </div>
+        </form>
+        <button onClick={this.props.fetchComments}>Fetch comments</button>
+      </div>
     );
   }
 }
 
-export default connect(null, actions)(CommentBox);
+export default connect(
+  null,
+  actions
+)(CommentBox);
