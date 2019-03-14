@@ -28,11 +28,11 @@ it('can fetch a list of comments & display them', (done) => {
     wrapped.find('.fetch-comments').simulate('click');
 
     // introduce a little pause so that moxios could run the stubRequest on time
-    setTimeout(() => {
+   moxios.wait(() => {
       wrapped.update();
       // expect to find a list of comments
       expect(wrapped.find('li').length).toEqual(2);
       done();
       wrapped.unmount();
-    }, 100);
+    });
 })
