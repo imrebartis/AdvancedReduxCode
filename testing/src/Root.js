@@ -8,7 +8,7 @@ export default ({ children, initialState = {} }) => {
   const store = createStore(
     reducers,
     initialState,
-    applyMiddleware(reduxPromise)
+    applyMiddleware()
   );
 
   return (
