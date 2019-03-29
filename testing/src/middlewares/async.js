@@ -16,5 +16,5 @@ export default ({ dispatch }) => next => action => {
     // send the new action thru the middlewares, but this time with data as payload & not the promise
     // so it will flow on to the reducers
     dispatch(newAction);
-  })
+  });
 };
