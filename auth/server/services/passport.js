@@ -11,7 +11,7 @@ const jwtOptions = {
 }
 
 // create JWT strategy
-const jwtLogin = new JwtStrategy(options, function(payload, done) {
+const jwtLogin = new JwtStrategy(jwtOptions, function(payload, done) {
   // see if the usr id exists in the db
 
   // if it does, call done with the user object
