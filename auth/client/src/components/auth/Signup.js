@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { reduxForm, Field } from 'redux-form';
+import { connect } from 'react-redux';
+import * as action from '../../actions';
 
 class Signup extends Component {
   onSubmit = formProps => {
