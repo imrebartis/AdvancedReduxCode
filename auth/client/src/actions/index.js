@@ -14,10 +14,10 @@ export const signup = (formProps, callback) => async dispatch => {
 };
 
 export const signout = () => {
-  localStorage.clearItem('token');
+  localStorage.removeItem('token');
 
   return {
-    tyoe: AUTH_USER,
+    type: AUTH_USER,
     payload: ''
   }
 };
